@@ -13,11 +13,11 @@ func get_input():
 
 
 func _physics_process(delta: float) -> void:
-	var playerInput = get_input()
+	var player_input = get_input()
 
-	if playerInput.length() > 0:
-		velocity = lerp(velocity, playerInput * SPEED, delta * ACCEL)
+	if player_input.length() > 0:
+		velocity = lerp(velocity, player_input * SPEED, delta * ACCEL)
 	else:
-		velocity = lerp(velocity, playerInput * SPEED, delta * (ACCEL * 2))
+		velocity = lerp(velocity, player_input * SPEED, delta * (ACCEL * 2))
 
 	move_and_slide()
