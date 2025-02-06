@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://v55xe1skb6fi"]
+[gd_scene load_steps=4 format=3 uid="uid://v55xe1skb6fi"]
 
 [ext_resource type="PackedScene" uid="uid://6ghdfri8qv1r" path="res://scenes/npc.tscn" id="2_tpl7n"]
+[ext_resource type="PackedScene" uid="uid://x8b5wf0ocppm" path="res://scenes/npc2.tscn" id="3_ekpv2"]
 [ext_resource type="PackedScene" uid="uid://day332p7tn3o3" path="res://scenes/player2d.tscn" id="3_v2045"]
 
 [node name="Game" type="Node2D"]
@@ -23,5 +24,10 @@ unique_name_in_owner = true
 position = Vector2(375, 234)
 
 [node name="NPC" parent="." instance=ExtResource("2_tpl7n")]
+visible = false
 position = Vector2(421, 244)
 dialogues = Array[String](["a", "h", "n", "l", "k"])
+
+[node name="NPC2" parent="." instance=ExtResource("3_ekpv2")]
+position = Vector2(333, 231)
+dialogues = Array[String](["a", "s", "d"])
