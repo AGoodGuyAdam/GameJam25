@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bkhqg2ve2sw8b"]
+[gd_scene load_steps=8 format=3 uid="uid://dbmx81x5ivqfx"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_vtstc"]
 [ext_resource type="Texture2D" uid="uid://d0garhd3tcar8" path="res://assets/mc/af0 - 32x.png" id="2_nw5y2"]
@@ -47,7 +47,6 @@ radius = 10.0499
 [node name="Player" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
-unique_name_in_owner = true
 script = ExtResource("1_vtstc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
