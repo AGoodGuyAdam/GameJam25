@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://v55xe1skb6fi"]
+[gd_scene load_steps=6 format=3 uid="uid://v55xe1skb6fi"]
 
-[ext_resource type="PackedScene" path="res://scenes/npc2.tscn" id="3_ekpv2"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_n1kqx"]
+[ext_resource type="PackedScene" uid="uid://x8b5wf0ocppm" path="res://scenes/npc2.tscn" id="3_ekpv2"]
 [ext_resource type="PackedScene" uid="uid://be55ll0q0et1k" path="res://scenes/door.tscn" id="3_qmitj"]
 [ext_resource type="PackedScene" uid="uid://day332p7tn3o3" path="res://scenes/player2d.tscn" id="3_v2045"]
+[ext_resource type="PackedScene" uid="uid://dhn0eofwqiqh0" path="res://scenes/lever.tscn" id="5_xmrqc"]
 
 [node name="Game" type="Node2D"]
 z_index = -4096
+script = ExtResource("1_n1kqx")
 
 [node name="World" type="Node2D" parent="."]
 
@@ -29,3 +32,7 @@ dialogues = Array[String](["Hi traveller!", "Can you help me?", "Do sucky sucky"
 
 [node name="Door" parent="." instance=ExtResource("3_qmitj")]
 position = Vector2(519, 237)
+required_stage = 1
+
+[node name="Lever" parent="." instance=ExtResource("5_xmrqc")]
+position = Vector2(420, 181)

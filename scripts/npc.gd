@@ -7,6 +7,7 @@ var talking := false
 @onready var dialogue_label := $Text
 @onready var player := %Player
 @onready var texture_button: TextureButton = $TextureButton
+@onready var game := $"/root/Game"
 
 
 func _on_texture_button_pressed() -> void:
@@ -19,6 +20,7 @@ func _on_texture_button_pressed() -> void:
 	if dialogue_idx >= dialogues.size():
 		dialogue_idx = 0
 		dialogue_label.text = ""
+		game.increase_stage()
 		return
 
 	dialogue_label.text = ""
