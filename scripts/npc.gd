@@ -4,9 +4,9 @@ extends Node2D
 @onready var player := %Player
 
 @export var dialogues: Array[String] = []
+@onready var texture_button: TextureButton = $TextureButton
 
 var dialogue_idx := 0
-
 
 func _on_texture_button_pressed() -> void:
 	print(player.position)
