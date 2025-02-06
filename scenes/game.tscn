@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=5 format=3 uid="uid://v55xe1skb6fi"]
 
 [ext_resource type="PackedScene" path="res://scenes/player.tscn" id="1_earrf"]
@@ -14,10 +15,39 @@ texture = ExtResource("1_u0fy5")
 6:0/0 = 0
 7:0/0 = 0
 8:0/0 = 0
+=======
+[gd_scene load_steps=6 format=4 uid="uid://v55xe1skb6fi"]
+
+[ext_resource type="Texture2D" uid="uid://b0elefx8h2rdk" path="res://assets/placeholders/sprites/world_tileset.png" id="1_u0fy5"]
+[ext_resource type="PackedScene" uid="uid://bkhqg2ve2sw8b" path="res://scenes/player.tscn" id="1_yc2e4"]
+[ext_resource type="PackedScene" path="res://scenes/npc.tscn" id="2_tpl7n"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8odbt"]
+texture = ExtResource("1_u0fy5")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+>>>>>>> Stashed changes
 9:0/0 = 0
 10:0/0 = 0
 11:0/0 = 0
 0:1/0 = 0
+<<<<<<< Updated upstream
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -26,10 +56,30 @@ texture = ExtResource("1_u0fy5")
 6:1/0 = 0
 7:1/0 = 0
 8:1/0 = 0
+=======
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+>>>>>>> Stashed changes
 9:1/0 = 0
 10:1/0 = 0
 11:1/0 = 0
 0:2/0 = 0
+<<<<<<< Updated upstream
 1:2/0 = 0
 2:2/0 = 0
 3:2/0 = 0
@@ -38,6 +88,25 @@ texture = ExtResource("1_u0fy5")
 6:2/0 = 0
 7:2/0 = 0
 8:2/0 = 0
+=======
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+>>>>>>> Stashed changes
 9:2/0 = 0
 10:2/0 = 0
 11:2/0 = 0
@@ -133,8 +202,14 @@ texture = ExtResource("1_u0fy5")
 2:15/0 = 0
 3:15/0 = 0
 
+<<<<<<< Updated upstream
 [sub_resource type="TileSet" id="TileSet_vesep"]
 sources/0 = SubResource("TileSetAtlasSource_kntvi")
+=======
+[sub_resource type="TileSet" id="TileSet_8squq"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_8odbt")
+>>>>>>> Stashed changes
 
 [node name="Game" type="Node2D"]
 z_index = -4096
@@ -155,5 +230,14 @@ color = Color(0, 0.698039, 1, 1)
 tile_map_data = PackedByteArray(0, 0, 32, 0, 9, 0, 0, 0, 8, 0, 0, 0, 0, 0, 32, 0, 10, 0, 0, 0, 8, 0, 0, 0, 0, 0, 33, 0, 10, 0, 0, 0, 8, 0, 0, 0, 0, 0, 33, 0, 9, 0, 0, 0, 8, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_vesep")
 
+<<<<<<< Updated upstream
 [node name="Player" parent="." instance=ExtResource("1_earrf")]
 position = Vector2(204, 203)
+=======
+[node name="NPC" parent="." instance=ExtResource("2_tpl7n")]
+position = Vector2(509, 257)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAlAA4AAAAIAAAAAAAlAA8AAAAIAAAAAAAmAA4AAAAIAAAAAAAmAA8AAAAIAAAAAAAlABAAAAAIAAAAAAAmABAAAAAIAAAAAAAnABAAAAAIAAAAAAAnAA8AAAAIAAAAAAAnAA4AAAAIAAAAAAAiABEAAAAFAAAAAAAjABEAAAAFAAAAAAAiABIAAAAFAAAAAAAjABIAAAAFAAAAAAA=")
+tile_set = SubResource("TileSet_8squq")
+>>>>>>> Stashed changes
