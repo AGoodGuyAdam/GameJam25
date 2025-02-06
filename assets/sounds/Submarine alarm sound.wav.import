@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cxyqesjrytb0l"
+path="res://.godot/imported/Submarine alarm sound.wav-6d136952f6569e5838b7df5e9d393688.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Submarine alarm sound.wav"
+dest_files=["res://.godot/imported/Submarine alarm sound.wav-6d136952f6569e5838b7df5e9d393688.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
