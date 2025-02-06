@@ -1,10 +1,48 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbmx81x5ivqfx"]
+[gd_scene load_steps=8 format=3 uid="uid://bkhqg2ve2sw8b"]
 
-[ext_resource type="Texture2D" uid="uid://u1pjrmdeg2ay" path="res://assets/icon.svg" id="1_lwet4"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_vtstc"]
+[ext_resource type="Texture2D" uid="uid://d0garhd3tcar8" path="res://assets/mc/af0 - 32x.png" id="2_nw5y2"]
+[ext_resource type="Texture2D" uid="uid://de4ughjn1kq71" path="res://assets/mc/af1- 32x.png" id="3_jaxms"]
+[ext_resource type="Texture2D" uid="uid://d1ef2eycdtr0k" path="res://assets/mc/af2 - 32x.png" id="4_maoal"]
+[ext_resource type="Texture2D" uid="uid://cry58hyx6st1m" path="res://assets/mc/af0 - blink - 32x.png" id="5_ryej1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_agp2n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nw5y2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jaxms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_maoal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nw5y2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jaxms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_maoal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ryej1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jaxms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_maoal")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5gkq1"]
-radius = 13.0384
+radius = 10.0499
 
 [node name="Player" type="Node2D"]
 
@@ -12,13 +50,14 @@ radius = 13.0384
 unique_name_in_owner = true
 script = ExtResource("1_vtstc")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(0, -15)
-scale = Vector2(0.230469, 0.230469)
-texture = ExtResource("1_lwet4")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_agp2n")
+autoplay = "default"
+frame_progress = 0.920331
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(0, -15)
+position = Vector2(0, -10)
 shape = SubResource("CircleShape2D_5gkq1")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
