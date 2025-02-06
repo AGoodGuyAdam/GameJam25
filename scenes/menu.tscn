@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwpxlf2120lm7"]
+[gd_scene load_steps=2 format=3 uid="uid://bwpxlf2120lm7"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_4ss8m"]
-[ext_resource type="Script" path="res://scenes/menu_buttons/play_button.gd" id="2_0hctf"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -31,7 +30,6 @@ alignment = 1
 [node name="Play" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "Play"
-script = ExtResource("2_0hctf")
 
 [node name="Credits" type="Button" parent="HBoxContainer"]
 layout_mode = 2

@@ -1,0 +1,145 @@
+[gd_scene load_steps=19 format=3 uid="uid://c28y87emekss4"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_5h38m"]
+[ext_resource type="Texture2D" path="res://assets/mc/af0 - 32x.png" id="1_g7shf"]
+[ext_resource type="Texture2D" path="res://assets/mc/af1- 32x.png" id="2_v8ydc"]
+[ext_resource type="Texture2D" path="res://assets/mc/af2 - 32x.png" id="3_tlcan"]
+[ext_resource type="Texture2D" path="res://assets/mc/af0 - blink - 32x.png" id="4_tsmyb"]
+[ext_resource type="Texture2D" path="res://assets/mc_walking/sprite_walking0.png" id="5_r8cph"]
+[ext_resource type="Shader" path="res://shaders/vignette.gdshader" id="5_ru2ty"]
+[ext_resource type="Texture2D" path="res://assets/mc_walking/sprite_walking1.png" id="6_ytnyl"]
+[ext_resource type="Texture2D" path="res://assets/mc_walking/sprite_walking2.png" id="7_kvbw5"]
+[ext_resource type="Texture2D" path="res://assets/mc_walking/sprite_walking3.png" id="8_ggjo2"]
+[ext_resource type="Texture2D" path="res://assets/mc_walking/sprite_walking4.png" id="9_1lcgr"]
+[ext_resource type="Texture2D" path="res://assets/mc_walking/sprite_walking5.png" id="10_2xed6"]
+[ext_resource type="Texture2D" path="res://assets/mc_walking/sprite_walking6.png" id="11_a7saf"]
+[ext_resource type="Texture2D" path="res://assets/mc_walking/sprite_walking7.png" id="12_5qxf7"]
+[ext_resource type="Texture2D" path="res://assets/mc_walking/sprite_walking_blink.png" id="13_rqp0s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fkbfy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_g7shf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v8ydc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tlcan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_g7shf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v8ydc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tlcan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tsmyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v8ydc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tlcan")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_r8cph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ytnyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kvbw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ggjo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1lcgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2xed6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_a7saf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5qxf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rqp0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ytnyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kvbw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ggjo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1lcgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2xed6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_a7saf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5qxf7")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 9.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bmkra"]
+radius = 10.0499
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hcqtr"]
+shader = ExtResource("5_ru2ty")
+shader_parameter/outerRadius = 1.0
+shader_parameter/MainAlpha = 1.0
+shader_parameter/vignette_color = null
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_5h38m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_fkbfy")
+animation = &"walking"
+autoplay = "idle"
+frame_progress = 0.558586
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_bmkra")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+show_behind_parent = true
+light_mask = 0
+visibility_layer = 512
+zoom = Vector2(2, 2)
+position_smoothing_speed = 10.0
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D"]
+light_mask = 0
+visibility_layer = 512
+z_index = 4096
+material = SubResource("ShaderMaterial_hcqtr")
+offset_left = -180.0
+offset_top = -102.0
+offset_right = 180.0
+offset_bottom = 102.0
+metadata/_edit_use_anchors_ = true
