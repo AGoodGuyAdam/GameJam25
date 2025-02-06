@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://day332p7tn3o3"]
+[gd_scene load_steps=19 format=3 uid="uid://day332p7tn3o3"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_5h38m"]
 [ext_resource type="Texture2D" uid="uid://d0garhd3tcar8" path="res://assets/mc/af0 - 32x.png" id="1_g7shf"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d1ef2eycdtr0k" path="res://assets/mc/af2 - 32x.png" id="3_tlcan"]
 [ext_resource type="Texture2D" uid="uid://cry58hyx6st1m" path="res://assets/mc/af0 - blink - 32x.png" id="4_tsmyb"]
 [ext_resource type="Texture2D" uid="uid://byjqx8c05hpt0" path="res://assets/mc_walking/sprite_walking0.png" id="5_r8cph"]
+[ext_resource type="Shader" path="res://shaders/vignette.gdshader" id="5_ru2ty"]
 [ext_resource type="Texture2D" uid="uid://krqbi6epct5t" path="res://assets/mc_walking/sprite_walking1.png" id="6_ytnyl"]
 [ext_resource type="Texture2D" uid="uid://bv8r2wee8tfyp" path="res://assets/mc_walking/sprite_walking2.png" id="7_kvbw5"]
 [ext_resource type="Texture2D" uid="uid://df3if60gmhhke" path="res://assets/mc_walking/sprite_walking3.png" id="8_ggjo2"]
@@ -106,6 +107,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_bmkra"]
 radius = 10.0499
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hcqtr"]
+shader = ExtResource("5_ru2ty")
+shader_parameter/outerRadius = 1.0
+shader_parameter/MainAlpha = 1.0
+shader_parameter/vignette_color = null
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_5h38m")
 
@@ -114,11 +121,25 @@ position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_fkbfy")
 animation = &"walking"
 autoplay = "idle"
-frame_progress = 0.796803
+frame_progress = 0.544762
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bmkra")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+show_behind_parent = true
+light_mask = 0
+visibility_layer = 512
 zoom = Vector2(2, 2)
 position_smoothing_speed = 10.0
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D"]
+light_mask = 0
+visibility_layer = 512
+z_index = 4096
+material = SubResource("ShaderMaterial_hcqtr")
+offset_left = -180.0
+offset_top = -102.0
+offset_right = 180.0
+offset_bottom = 102.0
+metadata/_edit_use_anchors_ = true
