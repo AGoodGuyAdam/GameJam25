@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://v55xe1skb6fi"]
+[gd_scene load_steps=3 format=3 uid="uid://cjyxk22tk6i0y"]
+
+[ext_resource type="PackedScene" uid="uid://dbmx81x5ivqfx" path="res://scenes/player.tscn" id="1_yc2e4"]
+[ext_resource type="PackedScene" uid="uid://byvr5j5756irp" path="res://scenes/npc.tscn" id="2_tpl7n"]
 
 [node name="Game" type="Node2D"]
 z_index = -4096
@@ -6,6 +9,7 @@ z_index = -4096
 [node name="World" type="Node2D" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="World"]
+layer = -128
 
 [node name="ColorRect" type="ColorRect" parent="World/CanvasLayer"]
 offset_left = -680.0
@@ -13,3 +17,9 @@ offset_top = -426.0
 offset_right = 1831.0
 offset_bottom = 1256.0
 color = Color(0, 0.698039, 1, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_yc2e4")]
+position = Vector2(563, 260)
+
+[node name="NPC" parent="." instance=ExtResource("2_tpl7n")]
+position = Vector2(1, 0)
