@@ -1,12 +1,11 @@
 extends Node2D
 
-@onready var dialogue_label := $Text
-@onready var player := %Player
-
 @export var dialogues: Array[String] = []
-@onready var texture_button: TextureButton = $TextureButton
 
 var dialogue_idx := 0
+@onready var dialogue_label := $Text
+@onready var player := %Player
+@onready var texture_button: TextureButton = $TextureButton
 
 
 func _on_texture_button_pressed() -> void:
