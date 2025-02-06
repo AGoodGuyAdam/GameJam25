@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://v55xe1skb6fi"]
+[gd_scene load_steps=3 format=3 uid="uid://v55xe1skb6fi"]
+
+[ext_resource type="PackedScene" uid="uid://6ghdfri8qv1r" path="res://scenes/npc.tscn" id="2_tpl7n"]
+[ext_resource type="PackedScene" uid="uid://day332p7tn3o3" path="res://scenes/player2d.tscn" id="3_v2045"]
 
 [node name="Game" type="Node2D"]
 z_index = -4096
@@ -6,10 +9,19 @@ z_index = -4096
 [node name="World" type="Node2D" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="World"]
+layer = -128
 
 [node name="ColorRect" type="ColorRect" parent="World/CanvasLayer"]
-offset_left = -680.0
-offset_top = -426.0
-offset_right = 1831.0
-offset_bottom = 1256.0
+offset_left = -717.0
+offset_top = -454.0
+offset_right = 1794.0
+offset_bottom = 1228.0
 color = Color(0, 0.698039, 1, 1)
+
+[node name="Player" parent="." instance=ExtResource("3_v2045")]
+unique_name_in_owner = true
+position = Vector2(375, 234)
+
+[node name="NPC" parent="." instance=ExtResource("2_tpl7n")]
+position = Vector2(421, 244)
+dialogues = Array[String](["a", "h", "n", "l", "k"])

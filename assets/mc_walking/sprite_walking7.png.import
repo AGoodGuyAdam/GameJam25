@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3kyxossgot84"
-path="res://.godot/imported/slime_purple.png-291f0a7e5190540e37c370dd3c243aaf.ctex"
+uid="uid://cn6ok1563rifx"
+path="res://.godot/imported/sprite_walking7.png-2e5c4a82591d603f76481c8a0c407618.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/placeholders/sprites/slime_purple.png"
-dest_files=["res://.godot/imported/slime_purple.png-291f0a7e5190540e37c370dd3c243aaf.ctex"]
+source_file="res://assets/mc_walking/sprite_walking7.png"
+dest_files=["res://.godot/imported/sprite_walking7.png-2e5c4a82591d603f76481c8a0c407618.ctex"]
 
 [params]
 
