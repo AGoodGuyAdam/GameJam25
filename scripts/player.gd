@@ -29,4 +29,6 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.flip_h = false
 	elif player_input.x == 0:
 		animated_sprite.play("idle")
+	var overlapping_mobs = %Hitbox.get_overlapping_bodies()
+	print(overlapping_mobs.size()-1)
 	move_and_slide()
