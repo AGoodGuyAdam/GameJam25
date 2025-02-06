@@ -38,8 +38,13 @@ animations = [{
 "texture": ExtResource("4_maoal")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 4.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walking",
+"speed": 9.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5gkq1"]
@@ -59,8 +64,8 @@ script = ExtResource("1_vtstc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_agp2n")
-autoplay = "default"
-frame_progress = 0.920331
+animation = &"walking"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("CircleShape2D_5gkq1")
@@ -76,3 +81,4 @@ offset_left = -180.0
 offset_top = -102.0
 offset_right = 180.0
 offset_bottom = 102.0
+metadata/_edit_use_anchors_ = true
