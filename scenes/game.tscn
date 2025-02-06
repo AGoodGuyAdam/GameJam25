@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://v55xe1skb6fi"]
 
-[ext_resource type="PackedScene" uid="uid://x8b5wf0ocppm" path="res://scenes/npc2.tscn" id="3_ekpv2"]
+[ext_resource type="PackedScene" path="res://scenes/npc2.tscn" id="3_ekpv2"]
 [ext_resource type="PackedScene" uid="uid://day332p7tn3o3" path="res://scenes/player2d.tscn" id="3_v2045"]
 
 [node name="Game" type="Node2D"]
@@ -24,4 +24,4 @@ position = Vector2(375, 234)
 
 [node name="NPC2" parent="." instance=ExtResource("3_ekpv2")]
 position = Vector2(333, 231)
-dialogues = Array[String](["a", "s", "d"])
+dialogues = Array[String](["Hi traveller!", "Can you help me?", "Do sucky sucky"])
