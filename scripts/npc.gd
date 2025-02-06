@@ -8,10 +8,8 @@ extends Node2D
 
 var dialogue_idx := 0
 
-func _on_texture_button_pressed() -> void:
-	print(player.position)
-	print(position.distance_to(player.position))
 
+func _on_texture_button_pressed() -> void:
 	if position.distance_to(player.position) >= 50:
 		return
 
