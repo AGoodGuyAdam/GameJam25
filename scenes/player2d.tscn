@@ -1,4 +1,4 @@
-[gd_scene load_steps=112 format=3 uid="uid://c28y87emekss4"]
+[gd_scene load_steps=113 format=3 uid="uid://c28y87emekss4"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_5h38m"]
 [ext_resource type="Texture2D" uid="uid://d0garhd3tcar8" path="res://assets/mc/af0 - 32x.png" id="1_g7shf"]
@@ -106,6 +106,7 @@
 [ext_resource type="Texture2D" uid="uid://fxhmyiyqsatj" path="res://assets/start_cutscene/sprite_41.png" id="62_ie1ok"]
 [ext_resource type="AudioStream" uid="uid://buakhl8t104a0" path="res://assets/sounds/carpet_footsteps.wav" id="62_qg76c"]
 [ext_resource type="Texture2D" uid="uid://c6j8gko1skw7h" path="res://assets/start_cutscene/sprite_42.png" id="63_oriyn"]
+[ext_resource type="Script" path="res://scripts/start_cutscene_sound.gd" id="105_3x31i"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fkbfy"]
 animations = [{
@@ -557,6 +558,10 @@ offset_top = -101.0
 offset_right = 180.0
 offset_bottom = 102.0
 color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Camera2D/start"]
+stream = ExtResource("61_hujbe")
+script = ExtResource("105_3x31i")
 
 [node name="ColorRect" type="ColorRect" parent="Camera2D"]
 light_mask = 0

@@ -6,4 +6,5 @@ extends AudioStreamPlayer2D
 func _process(_delta: float) -> void:
 	if end.visible:
 		await get_tree().create_timer(3.5).timeout
-		play()
+		if !playing:
+			play()
