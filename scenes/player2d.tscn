@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c28y87emekss4"]
+[gd_scene load_steps=23 format=3 uid="uid://c28y87emekss4"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_5h38m"]
 [ext_resource type="Texture2D" uid="uid://d0garhd3tcar8" path="res://assets/mc/af0 - 32x.png" id="1_g7shf"]
@@ -7,14 +7,18 @@
 [ext_resource type="Texture2D" uid="uid://cry58hyx6st1m" path="res://assets/mc/af0 - blink - 32x.png" id="4_tsmyb"]
 [ext_resource type="Texture2D" uid="uid://byjqx8c05hpt0" path="res://assets/mc_walking/sprite_walking0.png" id="5_r8cph"]
 [ext_resource type="Shader" path="res://shaders/vignette.gdshader" id="5_ru2ty"]
+[ext_resource type="Texture2D" uid="uid://56p5nqbvxffj" path="res://assets/mc_walking_down/sprite_down0.png" id="6_jow3n"]
 [ext_resource type="Texture2D" uid="uid://krqbi6epct5t" path="res://assets/mc_walking/sprite_walking1.png" id="6_ytnyl"]
 [ext_resource type="Texture2D" uid="uid://bv8r2wee8tfyp" path="res://assets/mc_walking/sprite_walking2.png" id="7_kvbw5"]
+[ext_resource type="Texture2D" uid="uid://c7k14swo2vtdq" path="res://assets/mc_walking_down/sprite_down1.png" id="7_q015s"]
 [ext_resource type="Texture2D" uid="uid://df3if60gmhhke" path="res://assets/mc_walking/sprite_walking3.png" id="8_ggjo2"]
 [ext_resource type="Texture2D" uid="uid://daqlvd60f02pl" path="res://assets/mc_walking/sprite_walking4.png" id="9_1lcgr"]
 [ext_resource type="Texture2D" uid="uid://bswtdewrokhup" path="res://assets/mc_walking/sprite_walking5.png" id="10_2xed6"]
 [ext_resource type="Texture2D" uid="uid://cpjgv1h4vkukg" path="res://assets/mc_walking/sprite_walking6.png" id="11_a7saf"]
 [ext_resource type="Texture2D" uid="uid://cn6ok1563rifx" path="res://assets/mc_walking/sprite_walking7.png" id="12_5qxf7"]
 [ext_resource type="Texture2D" uid="uid://ciitea5x7ig1m" path="res://assets/mc_walking/sprite_walking_blink.png" id="13_rqp0s"]
+[ext_resource type="Texture2D" uid="uid://b6e3750qg54bo" path="res://assets/mc_walking_up/sprite_walkingup0.png" id="17_e1uw2"]
+[ext_resource type="Texture2D" uid="uid://yjskksvwr67c" path="res://assets/mc_walking_up/sprite_walkingup1.png" id="18_epsvr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fkbfy"]
 animations = [{
@@ -102,6 +106,28 @@ animations = [{
 "loop": true,
 "name": &"walking",
 "speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jow3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q015s")
+}],
+"loop": true,
+"name": &"walking_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_e1uw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_epsvr")
+}],
+"loop": true,
+"name": &"walking_up",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bmkra"]
@@ -119,9 +145,10 @@ script = ExtResource("1_5h38m")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_fkbfy")
-animation = &"walking"
+animation = &"walking_up"
 autoplay = "idle"
-frame_progress = 0.558586
+frame = 1
+frame_progress = 0.706991
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bmkra")

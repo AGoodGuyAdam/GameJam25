@@ -28,5 +28,12 @@ func _physics_process(delta: float) -> void:
 		elif player_input.x < 0:
 			animated_sprite.flip_h = false
 	elif player_input.x == 0:
-		animated_sprite.play("idle")
+		if(player_input.y == 0):
+			animated_sprite.play("idle")
+		else:
+			if player_input.y < 0:
+				animated_sprite.play("walking_up")
+			elif player_input.y > 0:
+				animated_sprite.play("walking_down")
+			
 	move_and_slide()
