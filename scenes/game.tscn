@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://v55xe1skb6fi"]
+[gd_scene load_steps=51 format=4 uid="uid://v55xe1skb6fi"]
 
 [ext_resource type="Texture2D" uid="uid://3cb1np8x3rti" path="res://assets/walls_tilemap.png" id="1_envq3"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_vrdv6"]
@@ -23,9 +23,10 @@
 [ext_resource type="PackedScene" uid="uid://coebebt2q433d" path="res://scenes/door.tscn" id="10_hg7wt"]
 [ext_resource type="Texture2D" uid="uid://b1r7icqpxbkc6" path="res://assets/stol_nopizza.png" id="10_wh4dn"]
 [ext_resource type="PackedScene" path="res://scenes/lever.tscn" id="13_hbr2v"]
-[ext_resource type="PackedScene" path="res://scenes/ladder.tscn" id="13_ujwjv"]
+[ext_resource type="PackedScene" uid="uid://b2f7vbtsgm3cu" path="res://scenes/ladder.tscn" id="13_ujwjv"]
 [ext_resource type="PackedScene" path="res://scenes/close_door_zone.tscn" id="14_cvrx0"]
 [ext_resource type="PackedScene" uid="uid://ct1vrb76p3j2m" path="res://scenes/pizza.tscn" id="18_kpohu"]
+[ext_resource type="Texture2D" uid="uid://bfnqn265808kk" path="res://assets/Ladder.png" id="26_fwlg6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43r04"]
 texture = ExtResource("2_74bx6")
@@ -208,6 +209,9 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_nlbwh")
 sources/1 = SubResource("TileSetAtlasSource_6ddab")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y55pj"]
+size = Vector2(33.0957, 32)
+
 [node name="Game" type="Node2D"]
 z_index = -4096
 script = ExtResource("1_vrdv6")
@@ -294,12 +298,28 @@ required_stage = 3
 position = Vector2(739, 3)
 
 [node name="Ladder" parent="Ladders" instance=ExtResource("13_ujwjv")]
+position = Vector2(-2, -2)
 to_position = Vector2(549, 935)
 
 [node name="Ladder2" parent="Ladders" instance=ExtResource("13_ujwjv")]
-position = Vector2(-520, 985)
+position = Vector2(-519, 973)
+rotation = -3.13315
 to_position = Vector2(182, 5)
 required_stage = 4
+
+[node name="FakeLadder2" type="StaticBody2D" parent="Ladders"]
+
+[node name="FakeLadder" type="Sprite2D" parent="Ladders/FakeLadder2"]
+position = Vector2(-531, -3)
+rotation = 1.5708
+scale = Vector2(0.966892, 1)
+texture = ExtResource("26_fwlg6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ladders/FakeLadder2"]
+position = Vector2(-531, -3)
+rotation = 1.5708
+scale = Vector2(0.966892, 1)
+shape = SubResource("RectangleShape2D_y55pj")
 
 [node name="Pizza" parent="." instance=ExtResource("18_kpohu")]
 position = Vector2(305, -47)

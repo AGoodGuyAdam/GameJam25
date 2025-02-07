@@ -47,10 +47,16 @@ text = "Play"
 layout_mode = 2
 text = "Credits"
 
+[node name="Controls" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Controls
+"
+
 [node name="Quit" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "Quit"
 
 [connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="HBoxContainer/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="HBoxContainer/Quit" to="." method="_on_quit_pressed"]
