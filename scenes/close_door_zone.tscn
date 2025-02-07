@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://wj80yoco3fre"]
+
+[ext_resource type="Script" path="res://scripts/close_door_zone.gd" id="1_8pudh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v21o7"]
+
+[node name="CloseDoorZone" type="Area2D"]
+script = ExtResource("1_8pudh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_v21o7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

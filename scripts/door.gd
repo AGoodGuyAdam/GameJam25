@@ -8,11 +8,16 @@ var MAGIC_DISTANCE := 540
 @onready var game := $"/root/Game"
 
 
+func close_door():
+	animated_sprite.play("closed")
+	collision_shape.set_deferred("disabled", false)
+
+
 func _on_texture_button_pressed() -> void:
 	if animated_sprite.animation != "closed":
 		return
 
-	if game.get_stage() < required_stage:
+	if game.get_stage() != required_stage:
 		return
 
 	if position.distance_to(player.position) >= MAGIC_DISTANCE + 50:
