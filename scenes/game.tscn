@@ -196,6 +196,10 @@ position = Vector2(904, 200)
 [node name="Lever" parent="Levers" instance=ExtResource("13_hbr2v")]
 required_stage = 1
 
+[node name="Lever2" parent="Levers" instance=ExtResource("13_hbr2v")]
+position = Vector2(-896, 748)
+required_stage = 3
+
 [node name="Ladders" type="Node2D" parent="."]
 position = Vector2(739, 3)
 
@@ -206,7 +210,3 @@ to_position = Vector2(549, 935)
 position = Vector2(-520, 985)
 to_position = Vector2(182, 5)
 required_stage = 4
-
-[node name="Lever" parent="." instance=ExtResource("13_hbr2v")]
-position = Vector2(8, 948)
-required_stage = 3
