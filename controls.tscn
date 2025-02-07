@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://48djrca1r8og"]
+
+[ext_resource type="Texture2D" uid="uid://dje5wvnoroy0h" path="res://assets/controls_sprite.png" id="1_4sgsj"]
+[ext_resource type="Script" path="res://scripts/controls.gd" id="1_uxi7p"]
+
+[node name="Controls" type="Node2D"]
+position = Vector2(234, 109)
+script = ExtResource("1_uxi7p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(113, 87)
+scale = Vector2(4.04167, 4.04167)
+texture = ExtResource("1_4sgsj")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 323.0
+offset_top = 217.0
+offset_right = 426.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

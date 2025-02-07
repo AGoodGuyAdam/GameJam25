@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://dw8u5so6bwcnn"]
+
+[ext_resource type="Script" path="res://scripts/lever.gd" id="1_dqmin"]
+[ext_resource type="Texture2D" uid="uid://bsj5fj8j02gpm" path="res://assets/lever/Lever_On0.png" id="1_xwu2n"]
+[ext_resource type="Texture2D" uid="uid://b1hgltbarqibu" path="res://assets/lever/Lever_On1.png" id="2_gpy1w"]
+[ext_resource type="Texture2D" uid="uid://8omcgnsocuh2" path="res://assets/lever/Lever_On2.png" id="3_fhmpy"]
+[ext_resource type="Texture2D" uid="uid://c7poltmrytxrs" path="res://assets/lever/Lever_On3.png" id="4_xpaes"]
+[ext_resource type="Texture2D" uid="uid://dta2dvpma381k" path="res://assets/lever/Lever_On4.png" id="5_wgacg"]
+[ext_resource type="AudioStream" uid="uid://dey05m35ajfi4" path="res://assets/sounds/lever_sound.wav" id="7_ua7o3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cyg6t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xwu2n")
+}],
+"loop": true,
+"name": &"off",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xwu2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gpy1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fhmpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xpaes")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wgacg")
+}],
+"loop": false,
+"name": &"on",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ag0f3"]
+size = Vector2(8, 14)
+
+[node name="Lever" type="StaticBody2D"]
+script = ExtResource("1_dqmin")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cyg6t")
+animation = &"off"
+autoplay = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_ag0f3")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -8.0
+offset_top = -7.0
+offset_bottom = 7.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_ua7o3")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
