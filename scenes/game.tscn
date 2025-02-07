@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://v55xe1skb6fi"]
+[gd_scene load_steps=15 format=4 uid="uid://v55xe1skb6fi"]
 
 [ext_resource type="Texture2D" uid="uid://3cb1np8x3rti" path="res://assets/walls_tilemap.png" id="1_envq3"]
 [ext_resource type="Texture2D" uid="uid://jbqbpxxctlmo" path="res://assets/barrel.png" id="2_4qkjx"]
 [ext_resource type="Texture2D" uid="uid://b8l7qflwr8ehh" path="res://assets/room_floor.png" id="2_74bx6"]
+[ext_resource type="Texture2D" uid="uid://tnhuge6vyo4n" path="res://assets/Border_Corner_01.png" id="3_fgd1m"]
 [ext_resource type="PackedScene" uid="uid://c28y87emekss4" path="res://scenes/player2d.tscn" id="3_v2045"]
+[ext_resource type="Texture2D" uid="uid://dvfu10s3mqan6" path="res://assets/corner.png" id="4_8ykrn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wtriw"]
 texture = ExtResource("1_envq3")
@@ -26,11 +28,24 @@ texture = ExtResource("2_74bx6")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iks0h"]
+texture = ExtResource("3_fgd1m")
+margins = Vector2i(2, 2)
+texture_region_size = Vector2i(6, 6)
+4:4/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_did38"]
+texture = ExtResource("4_8ykrn")
+texture_region_size = Vector2i(6, 6)
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_45kse"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_wtriw")
 sources/1 = SubResource("TileSetAtlasSource_drsd0")
+sources/2 = SubResource("TileSetAtlasSource_iks0h")
+sources/3 = SubResource("TileSetAtlasSource_did38")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlbwh"]
 texture = ExtResource("1_envq3")
@@ -107,4 +122,4 @@ tile_set = SubResource("TileSet_rcveo")
 
 [node name="Player" parent="." instance=ExtResource("3_v2045")]
 unique_name_in_owner = true
-position = Vector2(540, 944)
+position = Vector2(989, 154)
