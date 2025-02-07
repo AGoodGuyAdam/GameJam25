@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://v55xe1skb6fi"]
+[gd_scene load_steps=27 format=4 uid="uid://v55xe1skb6fi"]
 
 [ext_resource type="Texture2D" uid="uid://3cb1np8x3rti" path="res://assets/walls_tilemap.png" id="1_envq3"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_vrdv6"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://cxyqesjrytb0l" path="res://assets/sounds/Submarine alarm sound.wav" id="8_x5way"]
 [ext_resource type="PackedScene" uid="uid://c8o70eiufackw" path="res://scenes/npc2.tscn" id="9_aymfi"]
 [ext_resource type="PackedScene" uid="uid://be55ll0q0et1k" path="res://scenes/door.tscn" id="10_hg7wt"]
+[ext_resource type="PackedScene" uid="uid://dw8u5so6bwcnn" path="res://scenes/lever.tscn" id="13_hbr2v"]
 [ext_resource type="PackedScene" uid="uid://ilwa5yd21mda" path="res://scenes/ladder.tscn" id="13_ujwjv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43r04"]
@@ -170,7 +171,7 @@ required_stage = 2
 [node name="Door" parent="Doors" instance=ExtResource("10_hg7wt")]
 z_index = -4096
 position = Vector2(192, 0)
-required_stage = 1
+required_stage = 2
 
 [node name="Door3" parent="Doors" instance=ExtResource("10_hg7wt")]
 z_index = -4096
@@ -189,13 +190,23 @@ stream = ExtResource("8_x5way")
 position = Vector2(923, 170)
 dialogues = Array[String](["Hello Traveler!", "Can you help me?"])
 
+[node name="Levers" type="Node2D" parent="."]
+position = Vector2(904, 200)
+
+[node name="Lever" parent="Levers" instance=ExtResource("13_hbr2v")]
+required_stage = 1
+
 [node name="Ladders" type="Node2D" parent="."]
 position = Vector2(739, 3)
 
 [node name="Ladder" parent="Ladders" instance=ExtResource("13_ujwjv")]
-to_position = Vector2(547, 938)
+to_position = Vector2(549, 935)
 
 [node name="Ladder2" parent="Ladders" instance=ExtResource("13_ujwjv")]
 position = Vector2(-520, 985)
 to_position = Vector2(182, 5)
 required_stage = 4
+
+[node name="Lever" parent="." instance=ExtResource("13_hbr2v")]
+position = Vector2(8, 948)
+required_stage = 3
