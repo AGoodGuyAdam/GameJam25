@@ -14,7 +14,6 @@ var MAGIC_DISTANCE := 540
 func close_door():
 	animated_sprite.play("closed")
 	collision_shape.set_deferred("disabled", false)
-	close_sound.play()
 
 
 func _on_texture_button_pressed() -> void:

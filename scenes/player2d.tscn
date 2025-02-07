@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://c28y87emekss4"]
+[gd_scene load_steps=67 format=3 uid="uid://c28y87emekss4"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_5h38m"]
 [ext_resource type="Texture2D" uid="uid://d0garhd3tcar8" path="res://assets/mc/af0 - 32x.png" id="1_g7shf"]
@@ -60,6 +60,8 @@
 [ext_resource type="Texture2D" uid="uid://bd3i1lavly4g1" path="res://assets/endgame/sprite_fixedend37.png" id="57_ugk53"]
 [ext_resource type="Texture2D" uid="uid://boek3m3axnhwr" path="res://assets/endgame/sprite_fixedend38.png" id="58_8b36f"]
 [ext_resource type="Texture2D" uid="uid://c0144agx8gtfw" path="res://assets/endgame/sprite_fixedend39.png" id="59_5b74d"]
+[ext_resource type="AudioStream" uid="uid://bkmntxwth5l4o" path="res://assets/sounds/walking on steel.wav" id="61_hujbe"]
+[ext_resource type="AudioStream" uid="uid://buakhl8t104a0" path="res://assets/sounds/carpet_footsteps.wav" id="62_qg76c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fkbfy"]
 animations = [{
@@ -365,3 +367,9 @@ offset_top = -102.0
 offset_right = 180.0
 offset_bottom = 102.0
 metadata/_edit_use_anchors_ = true
+
+[node name="SteelSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("61_hujbe")
+
+[node name="CarpetSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("62_qg76c")
