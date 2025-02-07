@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://v55xe1skb6fi"]
+[gd_scene load_steps=7 format=3 uid="uid://v55xe1skb6fi"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_n1kqx"]
 [ext_resource type="PackedScene" uid="uid://x8b5wf0ocppm" path="res://scenes/npc2.tscn" id="3_ekpv2"]
 [ext_resource type="PackedScene" uid="uid://be55ll0q0et1k" path="res://scenes/door.tscn" id="3_qmitj"]
 [ext_resource type="PackedScene" uid="uid://day332p7tn3o3" path="res://scenes/player2d.tscn" id="3_v2045"]
 [ext_resource type="PackedScene" uid="uid://dhn0eofwqiqh0" path="res://scenes/lever.tscn" id="5_xmrqc"]
+[ext_resource type="AudioStream" uid="uid://cxyqesjrytb0l" path="res://assets/sounds/Submarine alarm sound.wav" id="6_61ycv"]
 
 [node name="Game" type="Node2D"]
 z_index = -4096
@@ -36,3 +37,8 @@ required_stage = 1
 
 [node name="Lever" parent="." instance=ExtResource("5_xmrqc")]
 position = Vector2(420, 181)
+
+[node name="Alarm" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_61ycv")
+
+[connection signal="finished" from="Alarm" to="." method="_on_alarm_finished"]
