@@ -185,5 +185,5 @@ required_stage = 4
 stream = ExtResource("8_x5way")
 
 [node name="NPC" parent="." instance=ExtResource("9_aymfi")]
-position = Vector2(919, 128)
+position = Vector2(923, 170)
 dialogues = Array[String](["Hello Traveler!", "Can you help me?"])
