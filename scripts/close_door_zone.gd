@@ -18,3 +18,6 @@ func _on_body_entered(body: Node2D) -> void:
 	door1.close_door()
 	door2.close_door()
 	door3.close_door()
+	var mob := preload("res://scenes/mob.tscn").instantiate()
+	mob.global_position = Vector2(-100, 20)
+	add_child(mob)

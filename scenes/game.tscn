@@ -20,11 +20,11 @@
 [ext_resource type="PackedScene" uid="uid://c8o70eiufackw" path="res://scenes/npc2.tscn" id="9_aymfi"]
 [ext_resource type="Texture2D" uid="uid://bmr85xi5c24g4" path="res://assets/Fridge.png" id="9_wcxjc"]
 [ext_resource type="Texture2D" uid="uid://bvj1pe6j4oytl" path="res://assets/goofyahh/Expensive_Table_Right.png" id="10_efmox"]
-[ext_resource type="PackedScene" uid="uid://coebebt2q433d" path="res://scenes/door.tscn" id="10_hg7wt"]
+[ext_resource type="PackedScene" uid="uid://be55ll0q0et1k" path="res://scenes/door.tscn" id="10_hg7wt"]
 [ext_resource type="Texture2D" uid="uid://b1r7icqpxbkc6" path="res://assets/stol_nopizza.png" id="10_wh4dn"]
-[ext_resource type="PackedScene" path="res://scenes/lever.tscn" id="13_hbr2v"]
-[ext_resource type="PackedScene" path="res://scenes/ladder.tscn" id="13_ujwjv"]
-[ext_resource type="PackedScene" path="res://scenes/close_door_zone.tscn" id="14_cvrx0"]
+[ext_resource type="PackedScene" uid="uid://dw8u5so6bwcnn" path="res://scenes/lever.tscn" id="13_hbr2v"]
+[ext_resource type="PackedScene" uid="uid://ilwa5yd21mda" path="res://scenes/ladder.tscn" id="13_ujwjv"]
+[ext_resource type="PackedScene" uid="uid://wj80yoco3fre" path="res://scenes/close_door_zone.tscn" id="14_cvrx0"]
 [ext_resource type="PackedScene" uid="uid://ct1vrb76p3j2m" path="res://scenes/pizza.tscn" id="18_kpohu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43r04"]
@@ -259,6 +259,7 @@ required_stage = 6
 z_index = -4096
 position = Vector2(-480, 0)
 required_stage = 5
+other_stage = 9
 
 [node name="CloseDoorZone" parent="Doors" instance=ExtResource("14_cvrx0")]
 position = Vector2(-193, 27)

@@ -17,6 +17,16 @@ func increase_stage():
 	if stage == 4:
 		spawn_mob(Vector2(129, 945))
 
+	if stage == 9:
+		# remove the mob
+		for child in get_children():
+			if child.name == "Doors":
+				for child2 in child.get_children():
+					if child2.name == "CloseDoorZone":
+						for child3 in child2.get_children():
+							if child3.name == "Mob":
+								child3.queue_free()
+
 	if stage == 1:
 		alarm.play()
 	else:
