@@ -11,5 +11,5 @@ func _process(_delta: float) -> void:
 
 func _physics_process(_delta: float) -> void:
 	var dir = global_position.direction_to(player.global_position)
-	velocity = dir * 15
+	velocity = dir * 25
 	move_and_slide()
