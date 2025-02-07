@@ -6,6 +6,14 @@ const ACCEL = 5.0
 var input := Vector2()
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var end := $"Camera2D/end"
+
+
+func play_endgame():
+	end.visible = true
+	end.get_node("AnimatedSprite2D").play("default")
+	await end.get_node("AnimatedSprite2D").animation_finished
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 
 func get_input():
@@ -28,12 +36,12 @@ func _physics_process(delta: float) -> void:
 		elif player_input.x < 0:
 			animated_sprite.flip_h = false
 	elif player_input.x == 0:
-		if(player_input.y == 0):
+		if player_input.y == 0:
 			animated_sprite.play("idle")
 		else:
 			if player_input.y < 0:
 				animated_sprite.play("walking_up")
 			elif player_input.y > 0:
 				animated_sprite.play("walking_down")
-			
+
 	move_and_slide()
