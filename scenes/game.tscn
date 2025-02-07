@@ -243,27 +243,24 @@ tile_set = SubResource("TileSet_rcveo")
 
 [node name="Player" parent="." instance=ExtResource("3_v2045")]
 unique_name_in_owner = true
+z_index = 30
 position = Vector2(997, 153)
 
 [node name="Doors" type="Node2D" parent="."]
 position = Vector2(528, 80)
 
 [node name="Door2" parent="Doors" instance=ExtResource("10_hg7wt")]
-z_index = -4096
 required_stage = 8
 
 [node name="Door" parent="Doors" instance=ExtResource("10_hg7wt")]
-z_index = -4096
 position = Vector2(192, 0)
 required_stage = 2
 
 [node name="Door3" parent="Doors" instance=ExtResource("10_hg7wt")]
-z_index = -4096
 position = Vector2(-192, 0)
 required_stage = 6
 
 [node name="Door4" parent="Doors" instance=ExtResource("10_hg7wt")]
-z_index = -4096
 position = Vector2(-480, 0)
 required_stage = 5
 other_stage = 9
@@ -281,12 +278,12 @@ stream = ExtResource("8_x5way")
 position = Vector2(923, 170)
 
 [node name="NPC" parent="Horvi and the gng" instance=ExtResource("9_aymfi")]
-dialogues = Array[String](["Hello Traveler!", "Can you help me?"])
+dialogues = Array[String](["I think they’ll be testing the alarm systems today.", "Mind turning it off when it starts?", "Look for a lever in the engine room."])
 
 [node name="NPC2" parent="Horvi and the gng" instance=ExtResource("9_aymfi")]
 position = Vector2(-860, -163)
 magic_sprite_number = 1
-dialogues = Array[String](["I hate mexicans", "deport the monkeys", "Tiktok gut", "Heil hi-"])
+dialogues = Array[String](["The air’s a bit heavy, isn’t it?", "Mind bringing me a pizza?", "It's in the kitchen."])
 
 [node name="Levers" type="Node2D" parent="."]
 position = Vector2(904, 200)

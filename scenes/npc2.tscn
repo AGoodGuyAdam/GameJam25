@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://c8o70eiufackw"]
+[gd_scene load_steps=15 format=3 uid="uid://c8o70eiufackw"]
 
 [ext_resource type="Script" path="res://scripts/npc.gd" id="1_o4uja"]
+[ext_resource type="FontFile" uid="uid://w7f4g4r20dms" path="res://assets/placeholders/fonts/PixelOperator8.ttf" id="2_fwtfm"]
 [ext_resource type="Texture2D" uid="uid://k2jnfe7bt5g0" path="res://assets/npc_tilemap.png" id="2_rnln7"]
 [ext_resource type="Texture2D" uid="uid://dqcgvxedtv70r" path="res://assets/donald_trump/sprite_paul10.png" id="3_ajp55"]
 [ext_resource type="Texture2D" uid="uid://cllbauhxul6k7" path="res://assets/donald_trump/sprite_paul11.png" id="4_tfkjv"]
@@ -76,10 +77,15 @@ offset_top = -29.0
 offset_right = 9.0
 
 [node name="Text" type="Label" parent="."]
-offset_left = -19.0
-offset_top = -53.0
-offset_right = 21.0
-offset_bottom = -30.0
+offset_left = -68.0
+offset_top = -82.0
+offset_right = 67.0
+offset_bottom = -33.0
+theme_override_fonts/font = ExtResource("2_fwtfm")
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
