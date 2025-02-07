@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwpxlf2120lm7"]
+[gd_scene load_steps=4 format=3 uid="uid://bwpxlf2120lm7"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_4ss8m"]
+[ext_resource type="Texture2D" uid="uid://dgsfq4wstn1nw" path="res://assets/main_menu/sprite_main0.png" id="2_sdf5a"]
+[ext_resource type="Texture2D" uid="uid://ccd2sn7sj8vgy" path="res://assets/main_menu/sprite_main1.png" id="3_t1ixs"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -10,6 +12,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4ss8m")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(360, 203)
+scale = Vector2(1.12813, 0.632812)
+texture = ExtResource("2_sdf5a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(363, 203)
+scale = Vector2(0.632812, 0.632812)
+texture = ExtResource("3_t1ixs")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1

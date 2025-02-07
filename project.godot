@@ -13,7 +13,7 @@ config_version=5
 config/name="GameJam25"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-boot_splash/image="res://assets/bubbly_bubbly_icon.png"
+boot_splash/image="res://assets/MainMenuBG011-SC_Final.png"
 config/icon="res://assets/bubbly_bubbly_icon.png"
 
 [display]
