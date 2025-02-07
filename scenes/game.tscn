@@ -92,4 +92,4 @@ tile_set = SubResource("TileSet_rcveo")
 
 [node name="Player" parent="." instance=ExtResource("3_v2045")]
 unique_name_in_owner = true
-position = Vector2(726, 949)
+position = Vector2(604, 208)
