@@ -1,9 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://c8o70eiufackw"]
+[gd_scene load_steps=14 format=3 uid="uid://c8o70eiufackw"]
 
 [ext_resource type="Script" path="res://scripts/npc.gd" id="1_o4uja"]
 [ext_resource type="Texture2D" uid="uid://k2jnfe7bt5g0" path="res://assets/npc_tilemap.png" id="2_rnln7"]
-[ext_resource type="Texture2D" uid="uid://cg74ibxholx6m" path="res://assets/placeholders/sprites/knight.png" id="3_c2qti"]
-[ext_resource type="Texture2D" uid="uid://jbqbpxxctlmo" path="res://assets/barrel.png" id="4_ypfa8"]
+[ext_resource type="Texture2D" uid="uid://dqcgvxedtv70r" path="res://assets/donald_trump/sprite_paul10.png" id="3_ajp55"]
+[ext_resource type="Texture2D" uid="uid://cllbauhxul6k7" path="res://assets/donald_trump/sprite_paul11.png" id="4_tfkjv"]
+[ext_resource type="Texture2D" uid="uid://dmjqox0fqxhbq" path="res://assets/donald_trump/sprite_paul12.png" id="5_h4c5y"]
+[ext_resource type="Texture2D" uid="uid://cw1t7pncmp6e6" path="res://assets/donald_trump/sprite_paul13.png" id="6_uaoi1"]
+[ext_resource type="Texture2D" uid="uid://h2mpy4hp01sh" path="res://assets/donald_trump/sprite_paul14.png" id="7_w7qb7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0wgrd"]
 atlas = ExtResource("2_rnln7")
@@ -20,10 +23,6 @@ region = Rect2(64, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_dh74a"]
 atlas = ExtResource("2_rnln7")
 region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q4qff"]
-atlas = ExtResource("3_c2qti")
-region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pdbsg"]
 animations = [{
@@ -46,10 +45,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q4qff")
+"texture": ExtResource("3_ajp55")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_ypfa8")
+"texture": ExtResource("4_tfkjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h4c5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uaoi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w7qb7")
 }],
 "loop": true,
 "name": &"2",
@@ -77,6 +85,7 @@ offset_bottom = -30.0
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_pdbsg")
 animation = &"2"
+frame_progress = 0.634349
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -7)

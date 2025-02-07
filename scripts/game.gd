@@ -12,6 +12,7 @@ func spawn_mob(magic_positioooooono: Vector2):
 
 func increase_stage():
 	stage += 1
+	print(stage)
 
 	if stage == 4:
 		spawn_mob(Vector2(129, 945))
