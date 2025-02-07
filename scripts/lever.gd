@@ -8,6 +8,9 @@ var MAGIC_DISTANCE := 935
 
 
 func _on_texture_button_pressed() -> void:
+	if animated_sprite.animation != "off":
+		return
+
 	if game.get_stage() < required_stage:
 		return
 

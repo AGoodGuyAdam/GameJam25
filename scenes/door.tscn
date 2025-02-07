@@ -1,7 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://coebebt2q433d"]
+[gd_scene load_steps=18 format=3 uid="uid://be55ll0q0et1k"]
 
-[ext_resource type="Texture2D" uid="uid://r3tbsco3w24y" path="res://assets/door_closed.png" id="1_fgel3"]
 [ext_resource type="Script" path="res://scripts/door.gd" id="1_in712"]
+[ext_resource type="Texture2D" uid="uid://c76np26q6mhuc" path="res://assets/door_open.png" id="2_ii77s"]
 [ext_resource type="Texture2D" uid="uid://sx8pujfhh85n" path="res://assets/Sub_DoorOnly_Anim_PNG.png" id="3_0ok0e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fn88n"]
@@ -99,7 +99,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uy07l")
 }],
-"loop": true,
+"loop": false,
 "name": &"open",
 "speed": 8.0
 }]
@@ -108,14 +108,14 @@ animations = [{
 script = ExtResource("1_in712")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_fgel3")
+texture = ExtResource("2_ii77s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_fn88n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(5.96046e-08, -13.2246)
-scale = Vector2(0.125, 0.112404)
+position = Vector2(5.96046e-08, -13)
+scale = Vector2(0.125, 0.113281)
 sprite_frames = SubResource("SpriteFrames_j45ry")
 animation = &"open"
 autoplay = "closed"
