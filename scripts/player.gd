@@ -8,6 +8,7 @@ var frozen := false
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var end := $"Camera2D/end"
+@onready var start := $"Camera2D/start"
 @onready var steel_sound := $SteelSound
 @onready var carpet_sound := $CarpetSound
 
@@ -18,6 +19,19 @@ func play_endgame():
 	end.get_node("AnimatedSprite2D").play("default")
 	await end.get_node("AnimatedSprite2D").animation_finished
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+
+
+func play_start_cutscene():
+	start.visible = true
+	frozen = true
+	start.get_node("AnimatedSprite2D").play("default")
+	await start.get_node("AnimatedSprite2D").animation_finished
+	start.visible = false
+
+
+func _ready():
+	play_start_cutscene()
+	frozen = false
 
 
 func get_input():
