@@ -186,9 +186,16 @@ required_stage = 4
 [node name="Alarm" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_x5way")
 
-[node name="NPC" parent="." instance=ExtResource("9_aymfi")]
+[node name="Horvi and the gng" type="Node2D" parent="."]
 position = Vector2(923, 170)
+
+[node name="NPC" parent="Horvi and the gng" instance=ExtResource("9_aymfi")]
 dialogues = Array[String](["Hello Traveler!", "Can you help me?"])
+
+[node name="NPC2" parent="Horvi and the gng" instance=ExtResource("9_aymfi")]
+position = Vector2(-877, -117)
+magic_sprite_number = 1
+dialogues = Array[String](["Die", "Skibidi rizzler"])
 
 [node name="Levers" type="Node2D" parent="."]
 position = Vector2(904, 200)

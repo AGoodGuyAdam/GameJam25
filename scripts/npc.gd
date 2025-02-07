@@ -1,5 +1,7 @@
 extends Node2D
 
+var MAGIC_DISTANCE := 954
+@export var magic_sprite_number := 0
 @export var dialogues: Array[String] = []
 
 var dialogue_idx := 0
@@ -9,10 +11,18 @@ var already_talked := false
 @onready var player := %Player
 @onready var texture_button: TextureButton = $TextureButton
 @onready var game := $"/root/Game"
+@onready var animated_sprite = $AnimatedSprite2D
+
+
+func _ready() -> void:
+	if magic_sprite_number == 0:
+		animated_sprite.play("1")
+	elif magic_sprite_number == 1:
+		animated_sprite.play("2")
 
 
 func _on_texture_button_pressed() -> void:
-	if position.distance_to(player.position) >= 50:
+	if position.distance_to(player.position) >= MAGIC_DISTANCE + 50:
 		return
 
 	if talking:
