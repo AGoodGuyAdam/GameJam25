@@ -52,7 +52,7 @@ script = ExtResource("1_kbccq")
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_ncrg3")
 autoplay = "default"
-frame_progress = 0.663398
+frame_progress = 0.934606
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -8)
