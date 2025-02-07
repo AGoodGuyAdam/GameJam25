@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://b6e3750qg54bo" path="res://assets/mc_walking_up/sprite_walkingup0.png" id="17_e1uw2"]
 [ext_resource type="Texture2D" uid="uid://yjskksvwr67c" path="res://assets/mc_walking_up/sprite_walkingup1.png" id="18_epsvr"]
 [ext_resource type="Texture2D" uid="uid://cp0u0vt77tjir" path="res://assets/endgame/sprite_endgame00.png" id="19_0cvp6"]
-[ext_resource type="Texture2D" uid="uid://jbqbpxxctlmo" path="res://assets/barrel.png" id="19_va4fq"]
+[ext_resource type="Texture2D" uid="uid://p2tquhh7f5f0" path="res://assets/Map_02.png" id="19_i5d64"]
 [ext_resource type="Texture2D" uid="uid://ddoyr706m8yde" path="res://assets/endgame/sprite_endgame01.png" id="20_asyn3"]
 [ext_resource type="Texture2D" uid="uid://y3v228kymbad" path="res://assets/endgame/sprite_endgame02.png" id="21_tmete"]
 [ext_resource type="Texture2D" uid="uid://cmfgs26xlwc2f" path="res://assets/endgame/sprite_endgame03.png" id="22_lrjtr"]
@@ -331,7 +331,7 @@ offset_left = -180.0
 offset_top = -102.0
 offset_right = 180.0
 offset_bottom = 102.0
-texture = ExtResource("19_va4fq")
+texture = ExtResource("19_i5d64")
 
 [node name="end" type="Node2D" parent="Camera2D"]
 visible = false
