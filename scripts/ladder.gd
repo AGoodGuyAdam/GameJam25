@@ -6,6 +6,7 @@ var MAGIC_DISTANCE := 730
 @onready var sprite = $Sprite2D
 @onready var player := %Player
 @onready var game := $"/root/Game"
+@onready var audio_stream_player_2d := $AudioStreamPlayer2D
 
 
 func _on_texture_button_pressed() -> void:
@@ -16,3 +17,7 @@ func _on_texture_button_pressed() -> void:
 		return
 
 	player.position = to_position
+	audio_stream_player_2d.play()
+	for child in game.get_children():
+		if child.name == "Mob":
+			child.queue_free()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dw8u5so6bwcnn"]
+[gd_scene load_steps=10 format=3 uid="uid://dw8u5so6bwcnn"]
 
 [ext_resource type="Script" path="res://scripts/lever.gd" id="1_dqmin"]
 [ext_resource type="Texture2D" uid="uid://bsj5fj8j02gpm" path="res://assets/lever/Lever_On0.png" id="1_xwu2n"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://8omcgnsocuh2" path="res://assets/lever/Lever_On2.png" id="3_fhmpy"]
 [ext_resource type="Texture2D" uid="uid://c7poltmrytxrs" path="res://assets/lever/Lever_On3.png" id="4_xpaes"]
 [ext_resource type="Texture2D" uid="uid://dta2dvpma381k" path="res://assets/lever/Lever_On4.png" id="5_wgacg"]
+[ext_resource type="AudioStream" uid="uid://dey05m35ajfi4" path="res://assets/sounds/lever_sound.wav" id="7_ua7o3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cyg6t"]
 animations = [{
@@ -57,5 +58,8 @@ shape = SubResource("RectangleShape2D_ag0f3")
 offset_left = -8.0
 offset_top = -7.0
 offset_bottom = 7.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_ua7o3")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

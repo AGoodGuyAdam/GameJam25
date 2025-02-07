@@ -5,6 +5,7 @@ var MAGIC_DISTANCE := 935
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var player := %Player
 @onready var game := $"/root/Game"
+@onready var audio_stream_player_2d := $AudioStreamPlayer2D
 
 
 func _on_texture_button_pressed() -> void:
@@ -18,4 +19,5 @@ func _on_texture_button_pressed() -> void:
 		return
 
 	animated_sprite.play("on")
+	audio_stream_player_2d.play()
 	game.increase_stage()
