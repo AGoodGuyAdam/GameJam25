@@ -349,14 +349,14 @@ position = Vector2(-479, -38)
 [node name="Alarm" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_x5way")
 
-[node name="Horvi and the gng" type="Node2D" parent="."]
+[node name="Horvi" type="Node2D" parent="."]
 position = Vector2(923, 170)
 
-[node name="NPC" parent="Horvi and the gng" instance=ExtResource("9_aymfi")]
+[node name="NPC" parent="Horvi" instance=ExtResource("9_aymfi")]
 dialogues = Array[String](["I think they’ll be testing the alarm systems today.", "Mind turning it off when it starts?", "Look for a lever in the engine room."])
 dialogue_stream = ExtResource("27_6r66e")
 
-[node name="NPC2" parent="Horvi and the gng" instance=ExtResource("9_aymfi")]
+[node name="NPC2" parent="Horvi" instance=ExtResource("9_aymfi")]
 position = Vector2(-860, -163)
 magic_sprite_number = 1
 dialogues = Array[String](["The air’s a bit heavy, isn’t it?", "Mind bringing me a pizza?", "It's in the kitchen."])

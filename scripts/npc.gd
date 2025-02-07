@@ -16,6 +16,25 @@ var already_talked := false
 @onready var dialogue_stream_player = $AudioStreamPlayer2D
 
 
+func add_dialogues(dialogues) -> void:
+	dialogue_idx = 0
+	self.dialogues = []
+	for dialogue in dialogues:
+		self.dialogues.append(dialogue)
+
+	dialogue_label.text = ""
+	talking = true
+	dialogue_stream_player.play()
+	for ch in dialogues[dialogue_idx]:
+		dialogue_label.text += ch
+		await get_tree().create_timer(.1).timeout
+
+	dialogue_stream_player.stop()
+	talking = false
+
+	dialogue_idx += 1
+
+
 func _ready() -> void:
 	dialogue_stream_player.stream = dialogue_stream
 
