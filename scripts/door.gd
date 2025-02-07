@@ -9,7 +9,7 @@ var MAGIC_DISTANCE := 540
 
 
 func _on_texture_button_pressed() -> void:
-	if game.get_stage() <= required_stage:
+	if game.get_stage() < required_stage:
 		return
 
 	if position.distance_to(player.position) >= MAGIC_DISTANCE + 50:
