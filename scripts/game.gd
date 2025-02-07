@@ -2,7 +2,13 @@ extends Node2D
 
 var stage := 0
 @onready var alarm := $Alarm
+var map = false
+@onready var player: CharacterBody2D = %Player
 
+func _process(delta: float) -> void:
+	if(Input.is_action_just_pressed("map")):
+		map = !map
+	player.get_node("Camera2D").get_node("Map").visible = map
 
 func spawn_mob(magic_positioooooono: Vector2):
 	var mob := preload("res://scenes/mob.tscn").instantiate()
