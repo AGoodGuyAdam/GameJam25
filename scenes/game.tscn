@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://v55xe1skb6fi"]
+[gd_scene load_steps=26 format=4 uid="uid://v55xe1skb6fi"]
 
 [ext_resource type="Texture2D" uid="uid://3cb1np8x3rti" path="res://assets/walls_tilemap.png" id="1_envq3"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_vrdv6"]
@@ -11,7 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://b3pd1088yyhej" path="res://assets/bed2.png" id="7_qikwo"]
 [ext_resource type="AudioStream" uid="uid://cxyqesjrytb0l" path="res://assets/sounds/Submarine alarm sound.wav" id="8_x5way"]
 [ext_resource type="PackedScene" uid="uid://c8o70eiufackw" path="res://scenes/npc2.tscn" id="9_aymfi"]
-[ext_resource type="PackedScene" path="res://scenes/door.tscn" id="10_hg7wt"]
+[ext_resource type="PackedScene" uid="uid://be55ll0q0et1k" path="res://scenes/door.tscn" id="10_hg7wt"]
+[ext_resource type="PackedScene" uid="uid://ilwa5yd21mda" path="res://scenes/ladder.tscn" id="13_ujwjv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43r04"]
 texture = ExtResource("2_74bx6")
@@ -187,3 +188,14 @@ stream = ExtResource("8_x5way")
 [node name="NPC" parent="." instance=ExtResource("9_aymfi")]
 position = Vector2(923, 170)
 dialogues = Array[String](["Hello Traveler!", "Can you help me?"])
+
+[node name="Ladders" type="Node2D" parent="."]
+position = Vector2(739, 3)
+
+[node name="Ladder" parent="Ladders" instance=ExtResource("13_ujwjv")]
+to_position = Vector2(547, 938)
+
+[node name="Ladder2" parent="Ladders" instance=ExtResource("13_ujwjv")]
+position = Vector2(-520, 985)
+to_position = Vector2(182, 5)
+required_stage = 4
