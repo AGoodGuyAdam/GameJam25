@@ -162,7 +162,7 @@ position_smoothing_speed = 10.0
 
 [node name="ColorRect" type="ColorRect" parent="Camera2D"]
 light_mask = 0
-visibility_layer = 512
+visibility_layer = 524288
 z_index = 4096
 material = SubResource("ShaderMaterial_hcqtr")
 offset_left = -180.0

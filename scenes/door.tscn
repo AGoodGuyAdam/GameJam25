@@ -1,25 +1,24 @@
 [gd_scene load_steps=4 format=3 uid="uid://be55ll0q0et1k"]
 
-[ext_resource type="Texture2D" uid="uid://u1pjrmdeg2ay" path="res://assets/icon.svg" id="1_6ftqk"]
+[ext_resource type="Texture2D" uid="uid://r3tbsco3w24y" path="res://assets/door_closed.png" id="1_fgel3"]
 [ext_resource type="Script" path="res://scripts/door.gd" id="1_in712"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t83tu"]
-size = Vector2(31.25, 28.75)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fn88n"]
+size = Vector2(32, 32)
 
 [node name="Door" type="StaticBody2D"]
 script = ExtResource("1_in712")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.230469, 0.230469)
-texture = ExtResource("1_6ftqk")
+texture = ExtResource("1_fgel3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.625, 0.375)
-shape = SubResource("RectangleShape2D_t83tu")
+shape = SubResource("RectangleShape2D_fn88n")
 
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = -7.0
-offset_top = -12.0
-offset_right = 7.0
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

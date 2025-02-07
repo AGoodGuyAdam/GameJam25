@@ -1,11 +1,15 @@
-[gd_scene load_steps=15 format=4 uid="uid://v55xe1skb6fi"]
+[gd_scene load_steps=19 format=4 uid="uid://v55xe1skb6fi"]
 
 [ext_resource type="Texture2D" uid="uid://3cb1np8x3rti" path="res://assets/walls_tilemap.png" id="1_envq3"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_vrdv6"]
 [ext_resource type="Texture2D" uid="uid://jbqbpxxctlmo" path="res://assets/barrel.png" id="2_4qkjx"]
 [ext_resource type="Texture2D" uid="uid://b8l7qflwr8ehh" path="res://assets/room_floor.png" id="2_74bx6"]
 [ext_resource type="Texture2D" uid="uid://tnhuge6vyo4n" path="res://assets/Border_Corner_01.png" id="3_fgd1m"]
 [ext_resource type="PackedScene" uid="uid://c28y87emekss4" path="res://scenes/player2d.tscn" id="3_v2045"]
 [ext_resource type="Texture2D" uid="uid://dvfu10s3mqan6" path="res://assets/corner.png" id="4_8ykrn"]
+[ext_resource type="AudioStream" uid="uid://cxyqesjrytb0l" path="res://assets/sounds/Submarine alarm sound.wav" id="8_x5way"]
+[ext_resource type="PackedScene" uid="uid://c8o70eiufackw" path="res://scenes/npc2.tscn" id="9_aymfi"]
+[ext_resource type="PackedScene" uid="uid://be55ll0q0et1k" path="res://scenes/door.tscn" id="10_hg7wt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wtriw"]
 texture = ExtResource("1_envq3")
@@ -99,6 +103,7 @@ sources/1 = SubResource("TileSetAtlasSource_6ddab")
 
 [node name="Game" type="Node2D"]
 z_index = -4096
+script = ExtResource("1_vrdv6")
 
 [node name="World" type="Node2D" parent="."]
 
@@ -123,3 +128,32 @@ tile_set = SubResource("TileSet_rcveo")
 [node name="Player" parent="." instance=ExtResource("3_v2045")]
 unique_name_in_owner = true
 position = Vector2(989, 154)
+
+[node name="Doors" type="Node2D" parent="."]
+position = Vector2(528, 80)
+
+[node name="Door2" parent="Doors" instance=ExtResource("10_hg7wt")]
+z_index = -4096
+required_stage = 2
+
+[node name="Door" parent="Doors" instance=ExtResource("10_hg7wt")]
+z_index = -4096
+position = Vector2(192, 0)
+required_stage = 1
+
+[node name="Door3" parent="Doors" instance=ExtResource("10_hg7wt")]
+z_index = -4096
+position = Vector2(-192, 0)
+required_stage = 3
+
+[node name="Door4" parent="Doors" instance=ExtResource("10_hg7wt")]
+z_index = -4096
+position = Vector2(-480, 0)
+required_stage = 4
+
+[node name="Alarm" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_x5way")
+
+[node name="NPC" parent="." instance=ExtResource("9_aymfi")]
+position = Vector2(919, 128)
+dialogues = Array[String](["Hello Traveler!", "Can you help me?"])
