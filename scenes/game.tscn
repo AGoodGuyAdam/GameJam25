@@ -319,7 +319,7 @@ tile_set = SubResource("TileSet_rcveo")
 [node name="Player" parent="." instance=ExtResource("3_v2045")]
 unique_name_in_owner = true
 z_index = 30
-position = Vector2(955, 164)
+position = Vector2(30, 132)
 
 [node name="Doors" type="Node2D" parent="."]
 position = Vector2(528, 80)
@@ -353,6 +353,7 @@ stream = ExtResource("8_x5way")
 position = Vector2(923, 170)
 
 [node name="NPC" parent="Horvi" instance=ExtResource("9_aymfi")]
+position = Vector2(-167, -56)
 dialogues = Array[String](["I think they’ll be testing the alarm systems today.", "Mind turning it off when it starts?", "Look for a lever in the engine room."])
 dialogue_stream = ExtResource("27_6r66e")
 
